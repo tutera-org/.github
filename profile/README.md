@@ -104,7 +104,7 @@ tutera is a comprehensive, multi-tenant Learning Management System (LMS) designe
 │                     Backend Layer                            │
 │  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────┐ │
 │  │  Express.js │ │  TypeScript │ │  JWT Auth   │ │  Zod    │ │
-│  │    API      │ │   Services  │ │ Middleware  │ │ Validation│ │
+│  │    API      │ │   Services  │ │ Middleware  │ │Validation││
 │  └─────────────┘ └─────────────┘ └─────────────┘ └─────────┘ │
 ├──────────────────────────────────────────────────────────────┤
 │                    Data & Storage Layer                      │
@@ -123,7 +123,7 @@ tutera is a comprehensive, multi-tenant Learning Management System (LMS) designe
 - **Scalable**: Horizontal scaling capabilities with stateless design
 - **Maintainable**: Clean code with comprehensive testing and documentation
 
-## Quick Start
+
 
 ### Prerequisites
 
@@ -133,50 +133,6 @@ tutera is a comprehensive, multi-tenant Learning Management System (LMS) designe
 - **Redis** 6.0 or higher
 - **AWS S3** or **Wasabi** bucket (for media storage)
 
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/tutera-org/tutera.git
-   cd tutera
-   ```
-
-2. **Install dependencies**
-   ```bash
-   # Install frontend dependencies
-   cd tutera-frontend
-   npm install
-   
-   # Install backend dependencies
-   cd ../tutera-backend
-   npm install
-   ```
-
-3. **Set up environment variables**
-   ```bash
-   # Backend environment
-   cd tutera-backend
-   cp .env.example .env
-   # Edit .env with your configuration
-   
-   # Frontend environment
-   cd ../tutera-frontend
-   cp .env.example .env
-   # Edit .env with your configuration
-   ```
-
-4. **Start the development servers**
-   ```bash
-   # Start backend server (terminal 1)
-   cd tutera-backend
-   npm run dev
-   
-   # Start frontend server (terminal 2)
-   cd tutera-frontend
-   npm run dev
-   ```
-
-5. **Access the application**
    - Frontend: `http://localhost:3000`
    - Backend API: `http://localhost:5000`
    - API Documentation: `http://localhost:5000/api/v1/docs`
@@ -261,83 +217,6 @@ tutera/
 - **CDN Ready**: Static asset optimization
 - **Environment**: Development and production configurations
 - **Monitoring**: Health check endpoints and structured logging
-
-## Development
-
-### Scripts and Commands
-
-#### Frontend (tutera-frontend)
-```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run start        # Start production server
-npm run lint         # Run ESLint
-```
-
-#### Backend (tutera-backend)
-```bash
-npm run dev          # Start development server with hot reload
-npm run build        # Build for production
-npm start            # Start production server
-npm test             # Run tests
-npm run lint         # Run ESLint
-npm run swagger      # Generate Swagger documentation
-```
-
-### Environment Configuration
-
-#### Backend (.env)
-```env
-# Server Configuration
-NODE_ENV=development
-PORT=5000
-API_VERSION=v1
-
-# Database
-MONGODB_URI=mongodb://localhost:27017/tutera
-REDIS_URL=redis://localhost:6379
-
-# JWT Configuration
-JWT_SECRET=your-super-secret-jwt-key
-JWT_REFRESH_SECRET=your-refresh-token-secret
-JWT_EXPIRE=24h
-JWT_REFRESH_EXPIRE=7d
-
-# Cloud Storage
-AWS_ACCESS_KEY_ID=your-access-key
-AWS_SECRET_ACCESS_KEY=your-secret-key
-AWS_REGION=us-east-1
-S3_BUCKET_NAME=your-bucket-name
-
-# Email Configuration
-SENDGRID_API_KEY=your-sendgrid-api-key
-FROM_EMAIL=noreply@tutera.com
-```
-
-#### Frontend (.env)
-```env
-# API Configuration
-NEXT_PUBLIC_API_BASE_URL=http://localhost:5000/api/v1
-NEXT_PUBLIC_APP_URL=http://localhost:3000
-
-# Stripe (for payments)
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your-stripe-key
-STRIPE_SECRET_KEY=your-stripe-secret
-```
-
-## Documentation
-
-### API Documentation
-- **Interactive Swagger UI**: `http://localhost:5000/api/v1/docs`
-- **API Reference**: Comprehensive endpoint documentation
-- **Postman Collections**: Ready-to-use API testing collections
-
-### Development Documentation
-- **Frontend**: Component documentation and usage examples
-- **Backend**: Service architecture and data models
-- **Deployment**: Production deployment guides
-
-### User Documentation
 - **Creator Guide**: How to create and manage courses
 - **Student Guide**: How to enroll and learn
 - **Admin Guide**: Platform administration
@@ -345,8 +224,6 @@ STRIPE_SECRET_KEY=your-stripe-secret
 ## Contributing
 
 We welcome contributions to the Tutera project! Please follow our comprehensive contributing guidelines.
-
-### Development Workflow
 
 1. **Fork the repository**
 2. **Create a feature branch**
@@ -364,19 +241,6 @@ We welcome contributions to the Tutera project! Please follow our comprehensive 
 - **Prettier**: Use consistent formatting
 - **Testing**: Add tests for new features
 - **Documentation**: Update relevant documentation
-
-### Commit Message Format
-
-Follow the Conventional Commits specification:
-```
-type(scope): description
-
-[optional body]
-
-[optional footer]
-```
-
-Types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
 
 ## Acknowledgments
 
