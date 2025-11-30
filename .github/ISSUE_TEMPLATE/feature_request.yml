@@ -1,0 +1,166 @@
+name: Feature Request
+description: Suggest an idea or enhancement for Tutera
+labels: [enhancement, triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature Request
+        
+        Thanks for suggesting a feature or enhancement for Tutera! Your ideas help us improve the platform for everyone.
+        
+        > **Before submitting**: Please check if this feature has already been [requested](https://github.com/tutera-org/tutera/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement).
+        
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: Short description of the feature or enhancement.
+      placeholder: e.g. "Add dark mode to the main dashboard"
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: feature_type
+    attributes:
+      label: Feature Type
+      description: What type of feature are you requesting?
+      options:
+        - New Feature - Completely new functionality
+        - Enhancement - Improving existing functionality
+        - UI/UX Improvement - Better user experience
+        - Performance Improvement - Faster or more efficient
+        - Integration - Connect with external services
+        - API Enhancement - Better API capabilities
+        - Documentation - Better docs or guides
+        - Other
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: target_user
+    attributes:
+      label: Target Users
+      description: Who would benefit from this feature?
+      options:
+        - All Users
+        - Course Creators/Instructors
+        - Students/Learners
+        - Institution Admins
+        - Super Admins
+        - Developers (API users)
+      validations:
+      required: true
+      
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to Solve
+      description: What problem does this feature solve? What is the use case?
+      placeholder: |
+        As a course creator, I need to schedule course releases in advance so that I can plan my content calendar and ensure consistent delivery to my students.
+        
+        Currently, I have to manually publish courses at the exact time I want them to go live, which is inconvenient for different time zones and planning purposes.
+      render: markdown
+    validations:
+      required: true
+      
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed Solution
+      description: How would you like this feature to work? Be as specific as possible.
+      placeholder: |
+        Add a "Schedule Publish" option in the course creation flow that allows creators to:
+        
+        1. Set a specific date and time for course publication
+        2. Choose the timezone for scheduling
+        3. Preview scheduled courses before they go live
+        4. Cancel or reschedule scheduled publications
+        5. Receive email notifications when courses are published
+        
+        The feature should be available in both the course creation wizard and the course management dashboard.
+      render: markdown
+    validations:
+      required: true
+      
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Any alternative solutions or features you have considered.
+      placeholder: |
+        - Using a third-party scheduling tool (but this adds complexity)
+        - Publishing courses as "draft" and manually enabling them (but requires manual intervention)
+        - Creating courses in advance and keeping them private (but doesn't automate the process)
+      render: markdown
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to you?
+      options:
+        - Critical - Essential for my workflow
+        - High - Significantly improves my experience
+        - Medium - Nice to have
+        - Low - Minor improvement
+    validations:
+      required: true
+      
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What would make this feature successful? How would you measure its impact?
+      placeholder: |
+        - I can schedule course publication up to 6 months in advance
+        - Scheduled courses automatically publish at the specified time
+        - I receive email confirmation when scheduled courses go live
+        - I can easily view, edit, or cancel scheduled publications
+        - The feature works across all time zones
+        - Performance impact is minimal (doesn't slow down the platform)
+      render: markdown
+      
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Add any other context, mockups, or references about the feature request.
+      placeholder: |
+        - This is similar to features in platforms like Teachable and Thinkific
+        - Would be especially useful for creators with international audiences
+        - Could integrate with calendar applications (Google Calendar, Outlook)
+        - Related to issue #123 and discussion #456
+        
+        **Mockups:**
+        [Attach any wireframes, mockups, or reference images]
+      render: markdown
+      
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      description: Please confirm the following before submitting.
+      options:
+        - label: I have searched the existing issues for duplicates.
+          required: true
+        - label: I have provided enough detail for the team to understand the request.
+          required: true
+        - label: I have considered the impact on different user types.
+          required: true
+        - label: This feature aligns with Tutera's mission and goals.
+          required: false
+          
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        
+        ## 🤝 Want to contribute?
+        
+        If you're interested in implementing this feature, let us know! We welcome community contributions and can provide guidance on getting started.
+        
+        🎓 **Thank you for helping shape the future of Tutera!**
+        
+        We'll review your feature request and consider it for our roadmap. If it's accepted, we'll update this issue with our plans and timeline.

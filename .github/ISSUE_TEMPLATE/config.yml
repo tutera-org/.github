@@ -1,0 +1,17 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a Bug
+    url: https://github.com/tutera-org/tutera/issues/new?assignees=&labels=bug%2Ctriage&template=bug_report.yml
+    about: Report a reproducible problem or unexpected behavior
+  - name: Request a Feature
+    url: https://github.com/tutera-org/tutera/issues/new?assignees=&labels=enhancement%2Ctriage&template=feature_request.yml
+    about: Suggest an idea or enhancement for Tutera
+  - name: Security Vulnerability
+    url: https://github.com/tutera-org/tutera/security
+    about: Please report security vulnerabilities privately following our security policy
+  - name: General Discussion
+    url: https://github.com/tutera-org/tutera/discussions
+    about: Ask questions, share ideas, or start a discussion
+  - name: Documentation
+    url: https://github.com/tutera-org/tutera/wiki
+    about: Check our documentation for guides and tutorials
